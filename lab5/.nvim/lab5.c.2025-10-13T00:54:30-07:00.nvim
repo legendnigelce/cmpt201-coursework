@@ -100,18 +100,17 @@ int main(void) {
   return 0;
 }
 
-// void coalescing_function (struct header *free_list_ptr, struct header
-// newly_freed_ptr)
-//   struct header *temp = free_list_ptr
-//   while temp != NULL
-//     if temp + temp->size == newly_freed_ptr
-//       temp->size = newly_freed_ptr->size + temp->size
-//       newly_freed_ptr = temp
-//     end if
-//     if newly_freed_ptr + newly_freed_ptr->size == temp
-//       newly_freed_ptr->size = newly_freed_ptr->size + temp->size
-//       newly_freed_ptr->id = temp->id
-//     end if
-//     temp = temp->next
-//   end while
-// end coalescing_function
+//void coalescing_function (struct header *free_list_ptr, struct header newly_freed_ptr)
+//  struct header *temp = free_list_ptr
+//  while temp != NULL
+//    if temp + temp->size == newly_freed_ptr
+//      temp->size = newly_freed_ptr->size + temp->size
+//      newly_freed_ptr = temp
+//    end if
+//    if newly_freed_ptr + newly_freed_ptr->size == temp
+//      newly_freed_ptr->size = newly_freed_ptr->size + temp->size
+//      newly_freed_ptr->id = temp->id
+//    end if
+//    temp = temp->next
+//  end while
+//end coalescing_function
