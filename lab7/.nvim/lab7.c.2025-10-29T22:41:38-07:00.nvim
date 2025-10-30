@@ -76,6 +76,8 @@ int main() {
 void map(Input *input, IntermediateInput *intermediate_input) {
   intermediate_input->line_number = input->line_number;
   intermediate_input->doubled_value = input->value * 2;
+  printf("%d\n", intermediate_input->line_number);
+  printf("%d\n", intermediate_input->doubled_value);
 }
 
 void groupByKey(IntermediateInput *input, Output *output, int *result_count) {
@@ -91,7 +93,7 @@ void groupByKey(IntermediateInput *input, Output *output, int *result_count) {
   output[*result_count].doubled_value = input->doubled_value;
   output[*result_count].line_numbers[0] = input->line_number;
   output[*result_count].count = 1;
-  (*result_count)++;
+  *result_count++;
   return;
 }
 

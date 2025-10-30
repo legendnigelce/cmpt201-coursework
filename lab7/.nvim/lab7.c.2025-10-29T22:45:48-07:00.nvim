@@ -84,6 +84,7 @@ void groupByKey(IntermediateInput *input, Output *output, int *result_count) {
       output[i].doubled_value = input->doubled_value;
       output[i].line_numbers[output[i].count] = input->line_number;
       output[i].count++;
+      printf("inside: %d\n", output[i].line_numbers[output[i].count]);
       return;
     }
   }
@@ -91,7 +92,8 @@ void groupByKey(IntermediateInput *input, Output *output, int *result_count) {
   output[*result_count].doubled_value = input->doubled_value;
   output[*result_count].line_numbers[0] = input->line_number;
   output[*result_count].count = 1;
-  (*result_count)++;
+  printf("outside: %d\n", output[*result_count].line_numbers[0]);
+  *result_count++;
   return;
 }
 
