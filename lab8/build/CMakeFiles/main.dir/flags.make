@@ -4,7 +4,7 @@
 # compile C with /usr/bin/clang
 C_DEFINES = 
 
-C_INCLUDES = -I/home/cmpt201/cmpt201-coursework/lab8/lab8/include
+C_INCLUDES = -I/home/cmpt201/cmpt201-coursework/lab8/include
 
 C_FLAGS = -g -fsanitize=thread -g -O1 -pthread
 
